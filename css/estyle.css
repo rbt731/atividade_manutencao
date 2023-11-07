@@ -1,0 +1,114 @@
+
+
+header{
+    background-color: #474747;
+}
+
+.bloco{background-color: #ccc;}
+.bloco img{min-width: 800px;}
+
+
+.imgBot{
+    min-width:30px;
+    height: 10px;
+}
+
+/* .titulo1{
+    text-align: center;
+    font-size: 22px;
+    color:azure;
+} */
+
+
+
+.imgMural{
+    width: 400px;
+    height: 300px;
+    border: 4px solid #f5c55c ;
+    border-radius: 14px;
+    object-fit: cover;
+    margin-bottom: 20px;
+
+}
+
+.mural{
+    
+    border: 3px solid #f5c55c;
+    border-radius: 12px;
+    background-color: #FDF3ED;
+    padding: 10px;
+}
+
+/* .intro{
+    border: 3px solid #f5c55c;
+    border-radius: 14px;
+} */
+
+/* .comentario{
+    font-size: 22px;
+    padding: 10px;
+    
+} */
+
+.subTitulo{
+    text-align: center;
+}
+
+.imgMural:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.993);
+}
+
+.fotagrafoPng{
+    width: 400px;
+    height: 400px;
+}
+
+.fotagrafoPng:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.intro:hover{
+    transform: scale(0.5.0.5);
+    transition: 0.5s;
+    box-shadow:0 0 20px rgba(211, 247, 10, 0.993);
+}
+
+.primeiroP{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+.segundoP{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+.barra{
+    color: gold;
+}
+
+.btnMural{
+    width: 25%;
+    background-color: yellow;
+    color: black;
+}
+
+.btnMural:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.993)
+}
+
+.roleta{
+    max-width: 500px;
+}
+
+.tituloRoleta{
+    font-size: 30px;
+    text-align: center;
+    color: white;
+}
