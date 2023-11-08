@@ -1,21 +1,42 @@
-var carousel = new
-bootstrap.Carousel(document.getElementById('carrosel'),{
-    interval:0.70
-})
+let meio = document.getElementById("meio")
+async function carregarDados() {
+    const link = "https://api.slingacademy.com/v1/sample-data/photos"
 
-async function dadosApi (){
-    const url = "https://api.slingacademy.com/v1/sample-data/photos"
+    const resultado = await fetch(link)
 
-    const valores = await fetch(url)
+    const dados = await resultado.json()
 
-    const dadosJson = await valores.json()
+    console.log(dados.photos)
 
-    console.log(dadosJson)
+    for(const itens of dados.photos){
+        const divizera = document.createElement("div")
+        const image = document.createElement("img")
+        image.src = itens.url
+        const div2 = document.createElement("div")
+        const div3 = document.createElement("div")
+        const para = document.createElement("p")
+        const titulo = document.createElement("h5")
+
+        divizera.classList.add("col")
+        divizera.style.width = "18rem"
+        image.classList.add("card-img-top")
+        div2.classList.add("card")
+        div3.classList.add("card-body")
+        para.classList.add("card-text")
+        titulo.classList.add("card-title")
+
+        image.textContent = itens.url
+        para.textContent = itens.description
+        titulo.textContent = itens.title
+
+        divizera.appendChild(image)
+        divizera.appendChild(div2)
+        div2.appendChild(div3)
+        div2.appendChild(para)
+        div3.appendChild(titulo)
+
+        meio.appendChild(divizera)
+    }
 }
-dadosApi()
 
-// document.getElementById("#sorteio").addEventListener("click",sortear(){
-//     var numeroAlt = Math.floor(Math.random() * 10) + 1;
-//     document.getElementById("#resultado").innerHTML = "Sua imagem é a número :" + numeroAlt;
-// });
-
+carregarDados()

@@ -108,8 +108,29 @@ email.addEventListener("keyup", function(){
 })
 
 
+let finalizar = document.querySelector("#botao")
 
+finalizar.addEventListener("click", ()=>{
 
+    if(nome.value == ""){
+        alert("O campo nome está vazio")
+        return false
+    }
+    if(telefone.value == ""){
+        alert("O campo telefone está vazio")
+        return false
+    }
+    if(WhatsApp.value == ""){
+        alert("O campo whatsapp está vazio")
+        return false
+    }
+    if(email.value == "" || minusculo.indexOf('@') == -1 || minusculo.indexOf('.com') == -1){
+        alert("O campo email está vazio")
+        return false
+    }
+    else{
+        confirm("Tem certeza de que deseja receber informações de nosso site?")
 
-
-// alerta para sair da pagina 
+        alert("Enviado com sucesso!")
+    }
+})
